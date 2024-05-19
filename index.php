@@ -12,8 +12,7 @@
                   Accesorios de calidad
                 </h1>
                 <p>
-                  Bienvenido a la pagina oficial de dollpins, donde podras explorar un amplio catalogo de accesorios para completar tu estilo
-                </p>
+                Bienvenido a la página oficial de Dollpins, donde podrás explorar un amplio catálogo de accesorios para completar tu estilo. Nuestro objetivo es ofrecerte las últimas tendencias en moda y calidad, para que siempre te sientas y te veas increíble.                </p>
                 <div class="btn-box">
                   <a href="" class="btn1">
                     Order Now

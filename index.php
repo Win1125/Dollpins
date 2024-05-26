@@ -70,9 +70,9 @@
     <ul class="filters_menu">
       <li class="active" data-filter="*">Todos</li>
       <li data-filter=".pines">Pines</li>
-      <li data-filter=".pizza">Botones</li>
+      <li data-filter=".botones">Botones</li>
       <li data-filter=".pasta">Papeleria</li>
-      <li data-filter=".fries">Accesorios</li>
+      <li data-filter=".accesorios">Accesorios</li>
     </ul>
 
     <div class="filters-content">
@@ -88,8 +88,7 @@
                   Pin gato diabolico
                 </h5>
                 <p>
-                  Pin de metal color morado, gato con pentagrama, ideal para un look punketo
-                </p>
+                Este intrigante pin presenta a un gato diabólico de color morado, diseñado para aquellos que buscan añadir un toque oscuro y lindo a su colección.</p>
                 <div class="options">
                   <h6>
                     $12.000
@@ -153,18 +152,18 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-6 col-lg-4 all burger">
+        <div class="col-sm-6 col-lg-4 all pines">
           <div class="box">
             <div>
               <div class="img-box">
-                <img src="images/f2.png" alt="">
+                <img src="images/pin2.png" alt="">
               </div>
               <div class="detail-box">
                 <h5>
-                  Delicious Burger
+                  Pin Bob Esponja
                 </h5>
                 <p>
-                  Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
+                Este encantador pin de Bob Esponja captura la esencia divertida y colorida del personaje favorito de todos. Bob Esponja, el alegre y optimista habitante de Fondo de Bikini.
                 </p>
                 <div class="options">
                   <h6>
@@ -229,19 +228,18 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-6 col-lg-4 all pizza">
+        <div class="col-sm-6 col-lg-4 all accesorios">
           <div class="box">
             <div>
               <div class="img-box">
-                <img src="images/f3.png" alt="">
+                <img src="images/parche1.png" alt="">
               </div>
               <div class="detail-box">
                 <h5>
-                  Delicious Pizza
+                  Parche Pepe La Rana
                 </h5>
                 <p>
-                  Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
-                </p>
+                Confeccionado en tela duradera y bordado con hilos de alta calidad, captura los detalles y colores distintivos de Pepe.</p>
                 <div class="options">
                   <h6>
                     $17
@@ -305,19 +303,18 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-6 col-lg-4 all pasta">
+        <div class="col-sm-6 col-lg-4 all pines">
           <div class="box">
             <div>
               <div class="img-box">
-                <img src="images/f4.png" alt="">
+                <img src="images/pin4.png" alt="">
               </div>
               <div class="detail-box">
                 <h5>
-                  Delicious Pasta
+                  Pin Frank Ocean
                 </h5>
                 <p>
-                  Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
-                </p>
+                Este pin de Frank Ocean del álbum "Blond" es un tributo a la obra maestra musical que cautivó a fans de todo el mundo. Con un diseño cuidadosamente detallado que captura la esencia del álbum, este pin es un símbolo de aprecio por la creatividad y la profundidad de Frank Ocean.                </p>
                 <div class="options">
                   <h6>
                     $18
@@ -381,19 +378,18 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-6 col-lg-4 all fries">
+        <div class="col-sm-6 col-lg-4 all botones">
           <div class="box">
             <div>
               <div class="img-box">
-                <img src="images/f5.png" alt="">
+                <img src="images/boton1.png" alt="">
               </div>
               <div class="detail-box">
                 <h5>
-                  French Fries
+                  Boton Spider-Man
                 </h5>
                 <p>
-                  Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
-                </p>
+                Este hermoso botón de nuestro querido vecino arácnido presenta a Spider-Man en todo su esplendor. Los colores nítidos y brillantes resaltan sobre el plástico de alta calidad. Ideal para mochilas, chaquetas o cualquier prenda                </p>
                 <div class="options">
                   <h6>
                     $10
@@ -457,19 +453,18 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-6 col-lg-4 all pizza">
+        <div class="col-sm-6 col-lg-4 all pines">
           <div class="box">
             <div>
               <div class="img-box">
-                <img src="images/f6.png" alt="">
+                <img src="images/pin3.png" alt="">
               </div>
               <div class="detail-box">
                 <h5>
-                  Delicious Pizza
+                  Pin Majoras Mask - Zelda
                 </h5>
                 <p>
-                  Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
-                </p>
+                Este impresionante pin de Majora's Mask de The Legend of Zelda captura la esencia misteriosa y fascinante del icónico artefacto. Con colores nítidos y brillantes sobre metal de alta calidad                </p>
                 <div class="options">
                   <h6>
                     $15
@@ -533,19 +528,19 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-6 col-lg-4 all burger">
+        <div class="col-sm-6 col-lg-4 all accesorios">
           <div class="box">
             <div>
               <div class="img-box">
-                <img src="images/f7.png" alt="">
+                <img src="images/aretes1.png" alt="">
               </div>
               <div class="detail-box">
                 <h5>
-                  Tasty Burger
+                  Aretes De Gato 
                 </h5>
                 <p>
-                  Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
-                </p>
+
+                Estos elegantes aretes presentan encantadores gatos negros con detalles de época victoriana. Finamente elaborados, los gatos están adornados con delicados encajes y filigranas que evocan la sofisticación del estilo victoriano.                </p>
                 <div class="options">
                   <h6>
                     $12
@@ -609,19 +604,19 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-6 col-lg-4 all burger">
+        <div class="col-sm-6 col-lg-4 all accesorios">
           <div class="box">
             <div>
               <div class="img-box">
-                <img src="images/f8.png" alt="">
+                <img src="images/aretes2.png" alt="">
               </div>
               <div class="detail-box">
                 <h5>
-                  Tasty Burger
+                  Aretes Corazon
                 </h5>
                 <p>
-                  Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
-                </p>
+
+                Estos elegantes aretes de corazón con estilo neo combinan un diseño contemporáneo con un toque sofisticado. Los corazones están finamente elaborados, destacándose con líneas limpias y una forma moderna.                </p>
                 <div class="options">
                   <h6>
                     $14
@@ -685,19 +680,19 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-6 col-lg-4 all pasta">
+        <div class="col-sm-6 col-lg-4 all accesorios">
           <div class="box">
             <div>
               <div class="img-box">
-                <img src="images/f9.png" alt="">
+                <img src="images/gargantilla1.png" alt="">
               </div>
               <div class="detail-box">
                 <h5>
-                  Delicious Pasta
+                  Gargantilla coquette
                 </h5>
                 <p>
-                  Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
-                </p>
+
+                Esta encantadora gargantilla coquette presenta un diseño delicado y romántico, perfecto para añadir un toque de elegancia femenina a cualquier atuendo. La pieza central destaca por sus detalles finamente elaborados y su sutil brillo.                </p>
                 <div class="options">
                   <h6>
                     $10
@@ -781,21 +776,25 @@
     <div class="row">
       <div class="col-md-6 ">
         <div class="img-box">
-          <img src="images/about-img.png" alt="">
+          <img src="images/about.png" alt="">
         </div>
       </div>
       <div class="col-md-6">
         <div class="detail-box">
           <div class="heading_container">
             <h2>
-              We Are Feane
+              Nosotros somos Dollpins
             </h2>
           </div>
           <p>
-            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-            in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-            are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-            the middle of text. All
+          Nuestra misión es ofrecer accesorios únicos que permitan a nuestros 
+clientes expresar su personalidad, estilo y pasiones de una manera auténtica y 
+creativa. Nos comprometemos a proporcionar productos de calidad excepcional, 
+servicio al cliente excepcional y una experiencia de compra excepcional en cada punto 
+de contacto. 
+Nos esforzamos por inspirar la confianza y la lealtad de nuestros clientes, y por 
+contribuir positivamente a la comunidad a través de prácticas comerciales éticas y 
+sostenibles.
           </p>
           <a href="">
             Read More
@@ -809,64 +808,6 @@
 <!-- end about section -->
 
 <!-- book section -->
-<section class="book_section layout_padding">
-  <div class="container">
-    <div class="heading_container">
-      <h2>
-        Book A Table
-      </h2>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="form_container">
-          <form action="">
-            <div>
-              <input type="text" class="form-control" placeholder="Your Name" />
-            </div>
-            <div>
-              <input type="text" class="form-control" placeholder="Phone Number" />
-            </div>
-            <div>
-              <input type="email" class="form-control" placeholder="Your Email" />
-            </div>
-            <div>
-              <select class="form-control nice-select wide">
-                <option value="" disabled selected>
-                  How many persons?
-                </option>
-                <option value="">
-                  2
-                </option>
-                <option value="">
-                  3
-                </option>
-                <option value="">
-                  4
-                </option>
-                <option value="">
-                  5
-                </option>
-              </select>
-            </div>
-            <div>
-              <input type="date" class="form-control">
-            </div>
-            <div class="btn_box">
-              <button>
-                Book Now
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="map_container ">
-          <div id="googleMap"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 <!-- end book section -->
 
 <?php include('./include/footer.php'); ?>

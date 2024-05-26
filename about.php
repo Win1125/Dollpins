@@ -160,10 +160,14 @@
               </h2>
             </div>
             <p>
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-              the middle of text. All
+            En Dollpins, nuestra misión es ofrecer accesorios únicos que permitan a nuestros 
+clientes expresar su personalidad, estilo y pasiones de una manera auténtica y 
+creativa. Nos comprometemos a proporcionar productos de calidad excepcional, 
+servicio al cliente excepcional y una experiencia de compra excepcional en cada punto 
+de contacto. 
+Nos esforzamos por inspirar la confianza y la lealtad de nuestros clientes, y por 
+contribuir positivamente a la comunidad a través de prácticas comerciales éticas y 
+sostenibles.
             </p>
             <a href="">
               Read More

@@ -1,5 +1,67 @@
 <?php
 require_once '../config/conexion.php';
+require '../login/header.php';
+
+if ($_POST) {
+	if (empty($_POST['password']) || empty($_POST['correo'])) {
+		echo "<script type='text/javascript'>
+        Swal.fire({
+            title: 'Ocurrió un error inesperado',
+            text: 'No has llenado todos los campos que son requeridos',
+            type: 'error',
+            confirmButtonText: 'Aceptar'
+        });
+      </script>";
+	} else {
+		$usuario = $_POST['correo'];
+		$password = $_POST['password'];
+
+		$login = $conn->query("SELECT id,nombre,usuario,correo,passw FROM usuarios where correo = '$usuario'");
+
+		$login->execute();
+		$fetch = $login->fetch(PDO::FETCH_ASSOC);
+
+		if ($login->rowCount() > 0) {
+			$password_bd = $fetch['passw'];
+			$pass_c = sha1($password);
+
+			if ($pass_c == $password_bd) {
+				echo "<script>
+                Swal.fire({
+                    icon : 'success',
+                    title: 'Bienvenido',
+                    text: 'Nos encanta recibirte',
+                    type: 'success'
+                }).then((result) => {
+                    if(result.isConfirmed){
+                        window.location='" . PAGEURL . "';
+                    }
+                });
+            </script>";
+				$_SESSION['id'] = $fetch['id'];
+				$_SESSION['nombre'] = $fetch['usuario'];
+			} else {
+				echo "<script type='text/javascript'>
+							Swal.fire({
+								title: 'Ocurrió un error inesperado',
+								text: 'La contraseña es incorrecta, por favor verifica',
+								type: 'error',
+								confirmButtonText: 'Aceptar'
+							});
+						</script>";
+			}
+		} else {
+			echo "<script type='text/javascript'>
+					Swal.fire({
+						title: 'Ocurrió un error inesperado',
+						text: 'El Usuario no existe',
+						type: 'error',
+						confirmButtonText: 'Aceptar'
+					});
+				</script>";
+		}
+	}
+}
 ?>
 
 <!DOCTYPE html>
@@ -7,7 +69,7 @@ require_once '../config/conexion.php';
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=<, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Login</title>
 	<link rel="stylesheet" type="text/css" href="../css/login.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -28,18 +90,18 @@ require_once '../config/conexion.php';
 					<form action="login.php" method="post">
 						<h1 class="display-2 text-center mb-5">Inicio de Sesión</h1>
 						<div class="form-floating mb-3">
-							<input type="email" class="form-control" placeholder="ejemplo@dominio.com">
+							<input type="email" name="correo" class="form-control" placeholder="ejemplo@dominio.com">
 							<label for="floatingInput">Correo electrónico</label>
 						</div>
 
 						<div class="form-floating">
-							<input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+							<input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
 							<label for="floatingPassword">Contraseña</label>
 						</div>
 
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="text-center text-lg-start mt-4 pt-2">
-								<button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-lg" style="background-color:#b9e0b4; padding-left: 2.5rem; padding-right: 2.5rem;">Iniciar Sesión</button>
+								<button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-lg" style="background-color:#b9e0b4; padding-left: 2.5rem; padding-right: 2.5rem;">Iniciar Sesión</button>
 								<p class="small fw-bold mt-2 pt-1 mb-0">¿Nuevo en Dollpins? <a href="./registro.php" class="link-danger">Registrate Aquí</a></p>
 							</div>
 							<a href="./recuperar.php" class="text-body mt-3"><b>¿Olvidaste tu Contraseña?</b></a>

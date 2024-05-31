@@ -18,6 +18,7 @@
         //if ($conn == true) echo "Connection established";
         
     } catch (PDOException $e) {
+        echo "Error: ".$e->getMessage();
         return "Error: ".$e->getMessage();
     }
 

@@ -43,6 +43,33 @@ body {
           align-items: flex-start;
 }
 
+.carousel-text-background {
+  position: relative;
+  padding: 20px;
+  background-image: url('../images/SLAY7.png'); /* Asegúrate de que la ruta a la imagen sea correcta */
+  background-size: cover;
+  background-position: center;
+  color: #fff; /* Cambia el color del texto a blanco para un mejor contraste */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Añade una sombra al texto para mejor legibilidad */
+}
+
+.carousel-text-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Añade una capa oscura semi-transparente sobre la imagen */
+  z-index: -1; /* Asegura que esta capa esté detrás del contenido del texto */
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5rem; /* Tamaño de letra más grande */
+  margin-bottom: 20px; /* Espacio debajo del título */
+}
+
 .heading_container h2 {
   position: relative;
   margin-bottom: 0;
@@ -378,7 +405,6 @@ a:focus {
 }
 
 .slider_section .carousel-indicators li {
-  background-color: #ffffff;
   width: 12px;
   height: 12px;
   border-radius: 100%;

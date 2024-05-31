@@ -72,9 +72,9 @@ require './funciones.php';
                 $mail->SMTPAuth = true;
 
                 //poner correo desde el cual se envia
-                $remitente = 'anfefrte@gmail.com';
+                $remitente = ''; //colocar un correo
                 $mail->Username = $remitente;
-                $mail->Password = 'fcxi ankt pmgh zhgi';
+                $mail->Password = ''; //colocar la contrasena de aplicacion del correo
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                 $mail->Port = 587;
 

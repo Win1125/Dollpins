@@ -1,6 +1,12 @@
 <?php
 session_start();
-define('APPURL', "http://localhost/Dollpins/Dollpins/admin/dashboard/");
+
+$nombre = $_SESSION['nombre'];
+
+if (!isset($_SESSION['id'])) {
+	header("Location: ./login/login.php");
+}
+//define('APPURL', "http://localhost/Dollpins/Dollpins/admin/dashboard/");
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +22,8 @@ define('APPURL', "http://localhost/Dollpins/Dollpins/admin/dashboard/");
   <meta name="keywords" content="Tienda Virtual, Dollpins, " />
   <meta name="description" content="Tienda virtual de Dollpins" />
   <meta name="author" content="Andres Franco, Andres Rincon" />
+  <link rel="stylesheet" href="../sw/dist/sweetalert2.min.css">
+  <script src="../sw/dist/sweetalert2.min.js"></script>
 
   <title> Dollpins </title>
 
@@ -28,26 +36,24 @@ define('APPURL', "http://localhost/Dollpins/Dollpins/admin/dashboard/");
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
   <!-- font awesome style -->
   <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
   <link rel="icon" href="./images/dollpins.ico">
-
 </head>
 
 <body>
 
   <div class="hero_area">
-    <div class="bg-box">
-      <img src="images/SLAY7.png" alt="">
-    </div>
+    <!-- AQUI ESTABA ANTES LA IMAGEN DEL INICIO -->
     <!-- header section strats -->
     <header class="header_section">
       <div class="container">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="index.php">
             <span>
               Dollpins
             </span>
@@ -60,23 +66,17 @@ define('APPURL', "http://localhost/Dollpins/Dollpins/admin/dashboard/");
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav  mx-auto ">
               <li class="nav-item active">
-                <a class="nav-link" href="../index.php">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../catalogo.php">Catálogo</a>
+                <a class="nav-link" href="catalogo.php">Catálogo</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../about.php">Acerca de</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="book.php">Book Table</a>
+                <a class="nav-link" href="about.php">Acerca de</a>
               </li>
             </ul>
             <div class="user_option">
-              <a href="" class="user_link">
-                <i class="fa fa-user" aria-hidden="true"></i>
-              </a>
-              <a class="cart_link" href="#">
+              <a class="cart_link" href="mostrarCarrito.php">
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
                   <g>
                     <g>
@@ -130,14 +130,17 @@ define('APPURL', "http://localhost/Dollpins/Dollpins/admin/dashboard/");
                   </g>
                 </svg>
               </a>
-              <form class="form-inline">
-                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                  <i class="fa fa-search" aria-hidden="true"></i>
+              <?php
+              echo (empty($_SESSION['CARRITO'])) ? 0 : count($_SESSION['CARRITO']) ;
+              ?>
+              <div class="ml-5 dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <?php echo $nombre; ?>
                 </button>
-              </form>
-              <a href="" class="order_online">
-                Order Online
-              </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="login/logout.php">Cerrar sesión</a>
+                </div>
+              </div>
             </div>
           </div>
         </nav>

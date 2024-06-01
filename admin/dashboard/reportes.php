@@ -11,7 +11,7 @@ ob_start();
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
 	<link rel="stylesheet" href="../sw/dist/sweetalert2.min.css">
-    <script src="../sw/dist/sweetalert2.min.js"></script>
+	<script src="../sw/dist/sweetalert2.min.js"></script>
 	<meta name="author" content="">
 
 	<title>Dollpins Dashboard</title>
@@ -26,53 +26,57 @@ ob_start();
 	<link rel="icon" href="./img/icon_admin.ico">
 
 </head>
+
 <body>
-<?php
-include_once './database/conexion.php';
+	<?php
+	include_once './database/conexion.php';
 
-$obj = new Conexion();
-$link = $obj->conectar();
+	$obj = new Conexion();
+	$link = $obj->conectar();
 
-$consulta = "SELECT * FROM productos";
-$resultado = $link->prepare($consulta);
-$resultado->execute();        
-$data=$resultado->fetchAll(PDO::FETCH_ASSOC);
+	$consulta = "SELECT * FROM productos";
+	$resultado = $link->prepare($consulta);
+	$resultado->execute();
+	$data = $resultado->fetchAll(PDO::FETCH_ASSOC);
 
-?>
-<h1>Reporte de Productos</h1>
-<table id="tablaProductos" class="table table-striped table-bordered table-condensed" style="width:100%">
-					<thead class="text-center">
-						<tr>
-							<th>Id</th>
-							<th>Nombre</th>
-							<th>Descripción</th>
-							<th>Valor</th>
-							<th>Categoria</th>
-							<th>Existencias</th>
-							<th>Estado</th>
-						
-						</tr>
-					</thead>
-					<tbody>
-                        <?php foreach($data as $datos){ ?>
-                        <tr>
-                            <td><?php echo $datos['id']?></td>
-                            <td><?php echo $datos['nombre']?></td>
-                            <td><?php echo $datos['descripcion']?></td>
-                            <td><?php echo $datos['valor']?></td>
-                            <td><?php echo $datos['id_categoria']?></td>
-                            <td><?php echo $datos['existencias']?></td>
-                            <td><?php echo $datos['estado']?></td>
-					</tbody>
-                    <?php }; ?>
-				</table>
+	?>
+	<h1>Reporte de Productos</h1>
+	<table id="tablaProductos" class="table table-striped table-bordered table-condensed" style="width:100%">
+		<thead class="text-center">
+			<tr>
+				<th>Id</th>
+				<th>Nombre</th>
+				<th>Descripción</th>
+				<th>Valor</th>
+				<th>Categoria</th>
+				<th>Existencias</th>
+				<th>Estado</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			<?php foreach ($data as $datos) { ?>
+				<tr>
+					<td><?php echo $datos['id'] ?></td>
+					<td><?php echo $datos['nombre'] ?></td>
+					<td><?php echo $datos['descripcion'] ?></td>
+					<td><?php echo $datos['valor'] ?></td>
+					<td><?php echo $datos['id_categoria'] ?></td>
+					<td><?php echo $datos['existencias'] ?></td>
+					<td><?php echo $datos['estado'] ?></td>
+				</tr>
+		</tbody>
+	<?php }; ?>
+	</table>
 </body>
+
 </html>
 <?php
 
 $html = ob_get_clean();
 
 require_once '../dashboard/assets/dompdf_1-0-2/dompdf/autoload.inc.php';
+
 use Dompdf\Dompdf;
 
 $domPdf = new Dompdf();
@@ -83,6 +87,6 @@ $domPdf->loadHtml($html);
 $domPdf->setPaper('letter');
 
 $domPdf->render();
-$domPdf->stream("reporteProductos.pdf",array("Attachment"=>false));
+$domPdf->stream("reporteProductos.pdf", array("Attachment" => false));
 
 ?>

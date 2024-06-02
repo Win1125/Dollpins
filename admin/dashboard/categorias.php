@@ -4,6 +4,9 @@
 	<div class="row">
 		<div class="col-lg-12">
 			<button id="btnNuevo" type="button" class="btn btn-info" data-toggle="modal"><i class="material-icons">library_add</i></button>
+			<a target="_blank" href="./reportesCategorias.php"><button id="btnReportes" type="button" class="btn btn-secondary"><i class="material-icons"><span class="material-symbols-outlined">
+							picture_as_pdf
+						</span></i></button> </a>
 		</div>
 	</div>
 </div>
@@ -18,7 +21,6 @@
 						<tr>
 							<th>Id</th>
 							<th>Categoria</th>
-							<th>Acciones</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -54,7 +56,7 @@
 							</div>
 						</div>
 					</div>
-					
+
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
@@ -84,22 +86,22 @@
 </a>
 <!-- Logout Modal-->
 <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Cerrar Sesión</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">¿Está seguro que desea cerrar su sesión?</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                    <a class="btn btn-primary" href="../logout.php">Cerrar Sesión</a>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Cerrar Sesión</h5>
+				<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+			</div>
+			<div class="modal-body">¿Está seguro que desea cerrar su sesión?</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+				<a class="btn btn-primary" href="../logout.php">Cerrar Sesión</a>
+			</div>
+		</div>
+	</div>
+</div>
 <script src="./assets/jquery/jquery.min.js"></script>
 <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="./assets/jquery-easing/jquery.easing.min.js"></script>
@@ -110,4 +112,5 @@
 <script type="text/javascript" src="./assets/DataTables/datatables.min.js"></script>
 <script type="text/javascript" src="./js/categoria.js"></script>
 </body>
+
 </html>

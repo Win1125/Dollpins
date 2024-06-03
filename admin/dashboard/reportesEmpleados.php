@@ -34,7 +34,7 @@ ob_start();
     $obj = new Conexion();
     $link = $obj->conectar();
 
-    $consulta = "SELECT f.id, c.usuario, f.total, f.fecha_hora, f.aprobacion FROM factura f join usuarios c on f.id_usuario = c.id";
+    $consulta = "SELECT e.id, e.nombre, e.correo, e.passw, c.cargo FROM empleados e join cargos c on e.id_cargo = c.id";
     $resultado = $link->prepare($consulta);
     $resultado->execute();
     $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
@@ -42,27 +42,27 @@ ob_start();
     ?>
     <div class="container">
         <div class="col-md-4 mt-5 mb-4">
-            <h1>Reporte de Pedidos</h1>
+            <h1>Reporte de Empleados</h1>
         </div>
         <div class="table-container">
-            <table id="tablaPedidos" class="table table-striped table-bordered table-condensed" style="width:100%">
+            <table id="tablaEmpleados" class="table table-striped table-bordered table-condensed" style="width:100%">
                 <thead class="text-center">
-                <tr>
-							<th>Factura</th>
-							<th>Usuario</th>
-							<th>Valor</th>
-							<th>Fecha</th>
-							<th>Estado</th>
-						</tr>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Contraseña</th>
+                        <th>Cargo</th>
+                    </tr>
                 </thead>
                 <tbody class="text-center">
                     <?php foreach ($data as $datos) { ?>
                         <tr class="text-center">
                             <td><?php echo $datos['id'] ?></td>
-                            <td><?php echo $datos['usuario'] ?></td>
-                            <td><?php echo $datos['total'] ?></td>
-                            <td><?php echo $datos['fecha_hora'] ?></td>
-                            <td><?php echo $datos['aprobacion'] ?></td>
+                            <td><?php echo $datos['nombre'] ?></td>
+                            <td><?php echo $datos['correo'] ?></td>
+                            <td><?php echo $datos['passw'] ?></td>
+                            <td><?php echo $datos['cargo'] ?></td>
                         </tr>
                 </tbody>
             <?php }; ?>
@@ -88,6 +88,6 @@ $domPdf->loadHtml($html);
 $domPdf->setPaper('letter');
 
 $domPdf->render();
-$domPdf->stream("reportePedidos.pdf", array("Attachment" => false));
+$domPdf->stream("reporteCargo.pdf", array("Attachment" => false));
 
 ?>

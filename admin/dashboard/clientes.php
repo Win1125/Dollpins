@@ -3,6 +3,9 @@
 	<div class="row">
 		<div class="col-lg-12">
 			<button id="btnNuevo" type="button" class="btn btn-info" data-toggle="modal"><i class="material-icons">library_add</i></button>
+			<a target="_blank" href="./reportesClientes.php"><button id="btnReportes" type="button" class="btn btn-secondary"><i class="material-icons"><span class="material-symbols-outlined">
+							picture_as_pdf
+						</span></i></button> </a>
 		</div>
 	</div>
 </div>
